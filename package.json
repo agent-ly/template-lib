@@ -1,0 +1,23 @@
+{
+  "name": "lib",
+  "description": "",
+  "repository": "",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:clean": "rm -rf dist",
+    "build:compile": "tsc -p tsconfig.build.json",
+    "build": "pnpm build:clean && pnpm build:compile",
+    "prepack": "pnpm build"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  },
+  "packageManager": "pnpm@8.0.0"
+}
